@@ -1,0 +1,51 @@
+<!-- Hacer un programa que le permita calcular su masa corporal y le diga si esta bajo de peso, normal o con sobrepeso  -->
+<meta charset="UTF-8">
+<h1>Hola ingresa tus datos para calcular tu masa corporal</h1>
+<script>
+
+    function satarLinea(){
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+        satarLinea();
+    }
+
+    function calcularImc(peso,altura){
+        return(peso/(altura*altura));
+    }
+
+    name = prompt("Ingresa tu nombre");
+    weight = prompt( name + " Ingresa tu peso");
+    height = prompt(name + " Ingresa tu altura");
+
+    imcCalculado = calcularImc(weight,height)
+    imprimir(name + " su IMC calculado es: " + imcCalculado);
+
+    //<!--------------- condicional-------------- -->
+    if(imcCalculado < 18.5){
+        imprimir("Su IMC esta abajo de lo normal !Cuidate mas");
+    }
+
+    if(imcCalculado >= 18.5){
+        if(imcCalculado < 25){
+            imprimir( " Su IMC esta dentro de lo normal" );
+        }
+    }
+
+    if(imcCalculado >= 25){
+        if(imcCalculado < 30){
+            imprimir( " Su IMC esta considerado como Sobrepeso !has ejercicio" );
+        }
+    }
+
+    if(imcCalculado >= 30){
+        imprimir("Su IMC esta considerado como Obecidad !come mas sano");
+    }
+
+
+
+</script>

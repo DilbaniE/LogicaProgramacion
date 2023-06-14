@@ -1,0 +1,28 @@
+<script>
+    function satarLinea(){
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+        satarLinea();
+    }
+
+    var numerofamilia = parseInt(prompt("ingrese la cantidad de mienbros de su familia"));
+    var contador = 0; 
+    var totaledad= 1; 
+
+    while(contador<=numerofamilia){
+        edad = parseInt(prompt("ingrese la edad "));
+        totaledad = edad +totaledad;
+        contador++;
+    }
+
+    mediaedad = totaledad  / numerofamilia;
+    imprimir("la media de edad es  " + mediaedad);
+    imprimir("fin")
+
+
+</script>
